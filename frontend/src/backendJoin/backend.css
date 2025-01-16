@@ -1,0 +1,64 @@
+.boxgap{
+    margin-left: 2rem;
+}
+@keyframes appear {
+    from {
+        opacity : 0.5 ;
+        scale : 0.7 ;
+    }
+    to {
+        opacity : 1 ;
+        scale : 1.1 ;
+    }
+}
+
+.block{
+    animation : appear 4s linear ;
+    animation-timeline: view(0%);
+    transition-duration: 0.3s;
+}
+.block:hover {
+    scale : 1.5 ;
+    transition-duration: 0.3s;
+}
+.imagee:hover{
+    scale : 1.1 ;
+    transition-duration: 0.3s;
+    opacity : 1.2 ;
+    animation : 1s shapeofImage 1s  linear infinite ;
+}
+.imagee{
+    scale : 1 ;
+    /* transition-duration: 0.3s; */
+    opacity : 1 ;
+    /* animation : shapeofImage 4s linear infinite ; */
+    transition-duration: 0.3s;
+    margin-bottom:1rem ;
+}
+@keyframes shapeofImage {
+     0% {
+    margin-bottom: 0.5rem;
+    }
+    50% {
+        margin-top: 0.5rem;
+   border-radius: 5% ;
+   /* transition-duration: 4s; */
+    }
+    100% {
+        margin-bottom: 0.5rem;
+        /* border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ; */
+        /* transition-duration: 4s; */
+    } 
+} 
+.title{
+    display: flex;
+    margin-top : 1rem !important ;
+}
+ .cardtext{
+  font-size: 1.5rem;
+}
+.contant{
+    display : flex ;
+    text-align: center ;
+    justify-content:center;
+}

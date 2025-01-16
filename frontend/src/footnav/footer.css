@@ -1,0 +1,17 @@
+.border-top{
+    background-color: #36454F;
+    color : white ;
+}
+.footertext{
+    display : flex ;
+    justify-content: center ;
+}
+.footergap{
+    gap: 9rem;
+}
+.riv{
+    margin-left: 1rem;
+    /* font-family: 'Montserrat', sans-serif; */
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'MyCustomFont', sans-serif; 
+}

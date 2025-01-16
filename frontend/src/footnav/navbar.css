@@ -1,0 +1,78 @@
+.nav{
+    /* width : 120% ; */
+    margin : -2rem -9rem ;
+}
+.navcoolor{
+    background-image: url("navbarim.png");
+    /* background-color: rgb(233, 233, 233); */
+    color : red ;
+    background-size: cover ;
+    /* border: 1px solid black; */
+}
+.navabraAlignment{
+    display : flex ;
+    justify-content: space-between;
+    align-items: center ;
+    width : 100% ;
+    /* background-color: red; */
+    text-align: center ;
+    gap : 2rem
+}
+.searchicon{
+    margin-left : -1rem ;
+    border-left : none ;
+    border-top-right-radius: 1rem ;
+    background-color: rgb(233, 233, 233);
+    border: 1px solid black;
+    transition-duration:0.1s ;
+}
+.searchicon:active{
+  background-color: black;
+  color : white ;
+  transition-duration:0.1s ;
+}
+.inp{
+    background-color: rgb(233, 233, 233);
+    border: 1px solid black ;
+     border-right-color: 1px solid green;
+     width : 7rem ;
+     height : 2rem
+}
+.Men {
+    color : rgb(0, 0, 0) !important;
+    /* background-color: rgb(255, 234, 0); */
+    text-decoration: none;
+    padding : 0.5rem ;
+    transition-duration: 1s;
+    display: flex ;;
+    margin-top: 0rem;
+    margin : 1rem ;
+    scale : 1.3
+}
+.Men:hover{
+   color : rgb(255, 255, 255) !important ;
+   background-color: rgb(0, 0, 0); 
+   border-radius: 1rem;
+   transition-duration: 0.3s;
+   scale: 1.6 ;
+}
+.logoimage{
+    height : 7rem ;
+
+}
+.addtocart{
+    color : black ;
+    transition-duration: 0.2s;  
+    margin-left: 1rem;
+    scale : 1.4 ;
+}
+.addtocart:hover{
+    scale : 1.7 ;
+    cursor: pointer;
+    transition-duration: 0.2s;  
+}
+.searchin{
+    border-radius: 1rem;
+    padding : 0.3rem ;
+    width : 13rem
+}
