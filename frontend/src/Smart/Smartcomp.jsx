@@ -15,4 +15,4 @@ const Smart = () => {
 );
 };
 
-export default Smart;
+export default Smart; 

@@ -38,18 +38,13 @@ app.get("/radha/index" ,  async (req, res) => {
     console.log(allListings) ;
 }  )
 
-app.get("/radha/watchopeninfo" ,  async (req, res) => {
-    const allListings = await Listing.find({})
-    // res.render("./listings/index.jsx")
-    res.json(allListings) ;
-    console.log(allListings) ;
-}  )
 
-app.get("/radha/indexs" ,  async (req, res) => {
-    const allListings = await Listing.find({})
-    res.render("./listings/index.ejs" , allListings )
-    // res.json(allListings) ;
-    // console.log(allListings) ;
+app.get("/radha/show/:id" ,  async (req, res) => {
+let {id} = req.params ;
+const listing = await Listing.findById(id) ;
+console.log(listing) ;
+res.json(listing) ;
+
 }  )
 
 

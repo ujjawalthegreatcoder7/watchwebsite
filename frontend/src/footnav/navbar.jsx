@@ -37,7 +37,7 @@ const Navbarr = () => {
 
   return (
 <>
-<nav className="navbar navbar-expand-lg bg-body-tertiary navcoolorr  shadow-lg">
+<nav className="navbar navbar-expand-md bg-body-tertiary navcoolorr  shadow-lg">
   <div className="container-fluid navcoolor">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>

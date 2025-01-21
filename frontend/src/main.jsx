@@ -37,7 +37,7 @@ root.render(
         <Route path="/radha/openwatchinfo/smart/:id" element={<SmartopenWatch/>} />  
         <Route path="/radha/openwatchinfo/women/:id" element={<Openwomenwatch/>} />              
         <Route path="/radha/openwatchinfo/brand/:id" element={<Openbrandwatch/>} />              
-        <Route path="/radha/openwatchinfo/home/:id" element={<Openhomecompwatch/>} />              
+        <Route path="/radha/openwatchinfo/home/:id" element={<Openhomecompwatch/>} />  
         {/* Add other routes as needed */}
       </Routes>
       

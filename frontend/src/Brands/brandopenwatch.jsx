@@ -1,45 +1,41 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 // import "./menbackendcomp.css"
-
-const Openbrandwatch = () => {
+import { useParams } from 'react-router-dom';
+import BrandimageList from './brandimageList';
+  
+const SmartOpen = () => {
+  const { id } = useParams(); 
   const [listings, setListings] = useState([]);
 
   useEffect(() => {
     // Fetch the listings from the backend API
-    axios.get('http://localhost:7070/radha/index')
+    axios.get(`http://localhost:7070/radha/show/${id}`)
       .then(response => {
         setListings(response.data); // Set the fetched data
       })
       .catch(error => {
         console.error('There was an error fetching the data!', error);
       });
-  }, []);
+  }, [id]);
 
-  return (<>    
-  <h1> Brand watch opened </h1>
-    <div className="row row-cols-lg-5 contant">
-      {listings.length > 0 ? (
-        listings.map(listing => (
-          <div className=" block mb-2  boxgap mt-3" style={{ width: '20rem' ,height : "25rem" }} key={listing._id}>
-            {/* <a href={`/radha/openwatchinfo/man/${listing._id}`}> */}
-              <img src={listing.imageforbrand} className="imagee hover card-img-top "  style={{ width: '100%' ,height : "15rem"}}  alt={listing.title} />
-            {/* </a> */}
-            <div className="card-body">
-              {/* <a href={`/listings/${listing._id}`}> */}
-                <b className="card-text cardtext title">{listing.title}</b>
-              {/* </a> */}
-              <p>{listing.description}</p>
-            </div>
-          </div>
-        ))
-      ) : (
-<h1> Loading.. </h1>
-)}
-    </div>
+  return (
+    <>    
+      {/* <h1>Man watch opened</h1> */}
+      <div className="row row-cols-lg-5 contant">
+      {/* <h1 className='mt-4' > {listings.description} </h1> */}
+      {/* <img  cla src={listings.image} alt="" /> */}
+      
+      <div className='mt-5 showimage '  >
+      <BrandimageList/>
+      </div>
+
+
+
+
+      </div>
     </>
-
   );
 };
 
-export default Openbrandwatch ;
+export default SmartOpen;
