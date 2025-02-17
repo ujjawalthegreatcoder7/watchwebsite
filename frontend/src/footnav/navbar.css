@@ -57,7 +57,8 @@
    scale: 1.6 ;
 }
 .logoimage{
-    height : 7rem ;
+    height : 3rem ;
+    width: 3rem;
 
 }
 .addtocart{
@@ -76,3 +77,20 @@
     padding : 0.3rem ;
     width : 13rem
 }
+/* Highlight active link */
+.nav-link.active-link {
+    color: #fff !important; /* Text color for active links */
+    background-color: #000000 !important; /* Black background for active links */
+    border-radius: 5px; /* Optional rounded corners */
+    padding: 5px 10px; /* Optional padding for better appearance */
+    transition: background-color 0.3 ease; /* Smooth transition */
+  }
+  
+  /* Optional hover effect for links */
+  .nav-link:hover {
+    color: #fff;
+    background-color: #9b9898;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  

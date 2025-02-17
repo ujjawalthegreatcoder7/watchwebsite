@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import "./menbackendcomp.css";
+import LinearColor from '../backendJoin/backendLoading';
 
 const ManContent = () => {
   const [listings, setListings] = useState([]);
@@ -55,14 +56,14 @@ const ManContent = () => {
               </a>
               <div className="card-body">
                 <a href={`/radha/openwatchinfo/man/${listing._id}`}>
-                  <b className="card-text tet cardtext title" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>{listing.title}</b>
+                  <b className="card-text tet title title" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>{listing.title}</b>
                 </a>
                 <p className='mt-4'>{listing.description}</p>
               </div>
             </div>
           ))
         ) : (
-          <h1>Loading...</h1>
+        <LinearColor/>
         )}
       </div>
 
@@ -80,7 +81,7 @@ const ManContent = () => {
           <button 
             key={index + 1} 
             onClick={() => handlePageChange(index + 1)} 
-            className={`btn mx-1 ${currentPage === index + 1 ? 'btn-primary' : 'btn-outline-primary'}`}
+            className={`btn mx-1 ${currentPage === index + 1 ? 'btn-dark' : 'btn-outline-dark'}`}
           >
             {index + 1}
           </button>

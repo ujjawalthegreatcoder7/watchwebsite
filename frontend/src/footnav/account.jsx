@@ -12,9 +12,26 @@ import PersonAdd from '@mui/icons-material/PersonAdd';
 import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
 import AccountCircleSharpIcon from '@mui/icons-material/AccountCircleSharp';
+import LoginIcon from '@mui/icons-material/Login';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function AccountMenu() {
+
+    const navigate = useNavigate();
+    const loginform = () => {
+      navigate('/Riviera Klock/filllogindetails') ;
+    }
+  
+    const signupform = () => {
+      navigate('/Riviera Klock/fillsignupdetails') ;
+    }
+
+    const logout = () => {
+      navigate("/Riviera Klock/logout") ;
+    }
+
+
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -97,12 +114,25 @@ export default function AccountMenu() {
           </ListItemIcon>
           Settings
         </MenuItem>
-        <MenuItem onClick={handleClose}>
+        <MenuItem onClick={logout}>
           <ListItemIcon>
             <Logout fontSize="small" />
           </ListItemIcon>
           Logout
         </MenuItem>
+        <MenuItem onClick={loginform}>
+          <ListItemIcon>
+            <LoginIcon fontSize="small" />
+          </ListItemIcon>
+          Log-in
+        </MenuItem>
+        <MenuItem onClick={signupform}>
+          <ListItemIcon>
+            <LoginIcon fontSize="small" />
+          </ListItemIcon>
+          Sign-up
+        </MenuItem>
+
       </Menu>
     </React.Fragment>
   );

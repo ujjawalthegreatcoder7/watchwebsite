@@ -10,6 +10,11 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
+import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+// import FormAddress from '../Formadress/addressform';
+import { useNavigate } from 'react-router-dom';
+
 
 export default function TemporaryDrawer() {
   const [open, setOpen] = React.useState(false);
@@ -18,31 +23,38 @@ export default function TemporaryDrawer() {
     setOpen(newOpen);
   };
 
+  const navigate = useNavigate();
+  const filldeliverydetails = () => {
+    navigate('/Riviera Klock/filldeliverydetails');
+  }
+
   const DrawerList = (
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
-      <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+      {/* <List>
+        {['Payment Details'].map((text, index) => (
           <ListItem key={text} disablePadding>
-            <ListItemButton>
+            <ListItemButton >
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                {index % 2 === 0 ? <CurrencyRupeeIcon /> : <MailIcon />}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>
           </ListItem>
         ))}
-      </List>
+      </List> */}
       <Divider />
       <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
+        {['Delivery Details'].map((text, index) => (
+          <btn onClick={filldeliverydetails} >
           <ListItem key={text} disablePadding>
-            <ListItemButton>
+            <ListItemButton> 
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                {index % 2 === 0 ? <LocalShippingIcon /> : <MailIcon />}
               </ListItemIcon>
               <ListItemText primary={text} />
-            </ListItemButton>
+            </ListItemButton> 
           </ListItem>
+          </btn>
         ))}
       </List>
     </Box>
@@ -50,6 +62,7 @@ export default function TemporaryDrawer() {
 
   return (
     <div>
+         
       <Button onClick={toggleDrawer(true)}>View More</Button>
       <Drawer open={open} onClose={toggleDrawer(false)}>
         {DrawerList}

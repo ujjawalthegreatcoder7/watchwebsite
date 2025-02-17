@@ -24,6 +24,7 @@ const ListingSchema = new mongoose.Schema({
             price : Number ,
     country : String ,
     location : String ,
+    msf : String ,
 }) ;
 
 let Listing = mongoose.model("Listing" , ListingSchema);

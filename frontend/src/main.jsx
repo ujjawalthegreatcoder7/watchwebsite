@@ -16,6 +16,10 @@ import SmartopenWatch from './Smart/opensmartwatch.jsx';
 import Openwomenwatch from './Women/openwomanwatch.jsx';
 import Openbrandwatch from './Brands/brandopenwatch.jsx';
 import Openhomecompwatch from './homecomponents/openhomecomp.jsx';
+import FormAddress from './Formadress/addressform.jsx';
+import LoginDetails from './Formadress/logindetails.jsx';
+import SignupDetails from './Formadress/signupdetails.jsx';
+import Logout from './Formadress/logout.jsx';
 // import {Listing} from "./models/listing.jsx"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -37,7 +41,14 @@ root.render(
         <Route path="/radha/openwatchinfo/smart/:id" element={<SmartopenWatch/>} />  
         <Route path="/radha/openwatchinfo/women/:id" element={<Openwomenwatch/>} />              
         <Route path="/radha/openwatchinfo/brand/:id" element={<Openbrandwatch/>} />              
-        <Route path="/radha/openwatchinfo/home/:id" element={<Openhomecompwatch/>} />  
+        <Route path="/radha/openwatchinfo/home/:id" element={<Openhomecompwatch/>} /> 
+        <Route path="/Riviera Klock/filldeliverydetails" element={<FormAddress/>} /> 
+        <Route path="/Riviera Klock/filllogindetails" element={<LoginDetails/>} /> 
+        <Route path="/Riviera Klock/fillsignupdetails" element={<SignupDetails/>} /> 
+        <Route path="/Riviera Klock/fillsignupdetails" element={<SignupDetails/>} /> 
+        <Route path="/Riviera Klock/logout" element={<Logout/>} /> 
+
+        
         {/* Add other routes as needed */}
       </Routes>
       

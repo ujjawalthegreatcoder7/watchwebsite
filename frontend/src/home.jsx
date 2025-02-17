@@ -4,6 +4,7 @@ import Homecomponent from "./homecomponents/homcomponent"
 const Home = () => {
     return(
         <>
+        {/* <AutoSlidingCarousel/> */}
         <Homecomponent/>
         </>
     )

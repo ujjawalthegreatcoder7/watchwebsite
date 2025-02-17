@@ -23,10 +23,9 @@ import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 import Paymentimage1 from  "../assets/paymentimage1.png"
 import Paymentimage2 from  "../assets/paymentimage2.png"
 import TemporaryDrawer from './OpenDrawer';
+import FormAddress from "../Formadress/addressform"
+import { useNavigate } from 'react-router-dom';
 
-const buttons = [
-    <Button key="one">Buy Now</Button>,
-    <Button key="two">Add To Cart</Button>,  ];
 
 function srcset(image, width, height, rows = 1, cols = 1) {
     return {
@@ -38,6 +37,16 @@ function srcset(image, width, height, rows = 1, cols = 1) {
   }
   
   export default function CustomImageList() {
+
+const navigate = useNavigate();
+  const filldeliverydetails = () => {
+    navigate('/Riviera Klock/filldeliverydetails');
+  }
+
+  const buttons = [
+    <Button key="one" onClick={filldeliverydetails} >Buy Now</Button>,
+    <Button key="two">Add To Cart</Button>,  ];
+
 
     const [drawerOpen, setDrawerOpen] = useState(false);
     const handleClick = () => {
