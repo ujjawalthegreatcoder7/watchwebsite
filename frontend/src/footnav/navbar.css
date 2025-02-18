@@ -39,7 +39,7 @@
      height : 2rem
 }
 .Men {
-    color : rgb(0, 0, 0) !important;
+    /* color : rgb(0, 0, 0) !important; */
     /* background-color: rgb(255, 234, 0); */
     text-decoration: none;
     padding : 0.5rem ;
@@ -47,14 +47,17 @@
     display: flex ;;
     margin-top: 0rem;
     margin : 1rem ;
-    scale : 1.3
+    scale : 1.3 ;
+    /* border-radius: 10rem ; */
+    /* border-bottom: 0.1rem solid black; */
 }
 .Men:hover{
-   color : rgb(255, 255, 255) !important ;
-   background-color: rgb(0, 0, 0); 
-   border-radius: 1rem;
+   /* color : black !important ; */
+   /* background-color: rgb(0, 0, 0);  */
+   border-radius: 50% ;
    transition-duration: 0.3s;
-   scale: 1.6 ;
+   /* scale: 1.6 ; */
+
 }
 .logoimage{
     height : 3rem ;
@@ -79,18 +82,19 @@
 }
 /* Highlight active link */
 .nav-link.active-link {
-    color: #fff !important; /* Text color for active links */
-    background-color: #000000 !important; /* Black background for active links */
+    color: black !important; /* Text color for active links */
+    /* background-color: #000000 !important; Black background for active links */
     border-radius: 5px; /* Optional rounded corners */
     padding: 5px 10px; /* Optional padding for better appearance */
     transition: background-color 0.3 ease; /* Smooth transition */
+    border-bottom: 0.1rem solid black ;
   }
   
   /* Optional hover effect for links */
   .nav-link:hover {
-    color: #fff;
-    background-color: #9b9898;
+    color: #000000;
+    /* background-color: #9b9898; */
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    /* transition: background-color 0.3s ease; */
   }
   

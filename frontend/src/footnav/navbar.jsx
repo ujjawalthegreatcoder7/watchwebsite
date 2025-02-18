@@ -73,7 +73,7 @@ const Navbarr = () => {
               {/* Search and Icons */}
               <div className="navbar-nav flexsearch">
                 <form className="d-flex" role="search">
-                  <Tooltip title="Search your dream watch">
+                  {/* <Tooltip title="Search your dream watch">
                     <input
                       className="form-control me-2 inp searchin navbar-nav"
                       type="search"
@@ -84,9 +84,9 @@ const Navbarr = () => {
                   <button
                     className="btn btn-outline-dark searchicon"
                     type="submit"
-                  >
-                    <SavedSearchIcon />
-                  </button>
+                  > */}
+                    {/* <SavedSearchIcon /> */}
+                  {/* </button> */}
 
                   <div className="nav-item addtocart">
                     <Tooltip title="Your Dream Watch Stored">
