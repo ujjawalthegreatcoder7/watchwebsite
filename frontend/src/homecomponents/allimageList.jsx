@@ -22,6 +22,8 @@ import Paymentimage1 from  "../assets/paymentimage1.png"
 import Paymentimage2 from  "../assets/paymentimage2.png"
 import TemporaryDrawer from '../Men/OpenDrawer';
 import Home from '../home';
+import AutoSlidingCarouse from './homemorecomp';
+// import Homemore from './homemorecomp';
 // import Brands from './brandcomp';
 
 const buttons = [
@@ -191,8 +193,10 @@ return( <>
     <hr></hr>
     </div>
     <h3 className='continuefor' > Continue For </h3>
-    <Home/>
-     </div>
+        <AutoSlidingCarouse/>
+       
+    
+      </div>
      <div className='mt-4 mb-4 radhaa ' >
     <hr></hr>
 </div>

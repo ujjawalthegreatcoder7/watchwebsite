@@ -3,10 +3,10 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import homepage from "./assets/homepage.png"
-import homepage2 from "./assets/homepage2.png"
-import homepage3 from "./assets/homepage3.png"
-import homepage4 from "./assets/homepage4.png"
-import homepage5 from "./assets/homepage5.png"
+import homepage2 from "./assets/homepage3.png"
+import homepage3 from "./assets/homepage4.png"
+import homepage4 from "./assets/homepage2.png"
+// import homepage5 from "./assets/homepage.png"
 
 import { Carousel } from 'react-bootstrap';
 
@@ -20,7 +20,7 @@ const AutoSlidingCarousel = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % 5); // Change slide every 3 seconds
+      setIndex((prevIndex) => (prevIndex + 1) % 4); // Change slide every 3 seconds
     }, 3000);
 
     return () => clearInterval(interval); // Clear the interval when the component unmounts
@@ -39,9 +39,6 @@ const AutoSlidingCarousel = () => {
       </Carousel.Item>    
         <Carousel.Item>
         <img className="d-block w-100" src={homepage4}   alt="Third slide" />
-      </Carousel.Item>
-      <Carousel.Item>
-        <img className="d-block w-100" src={homepage5}   alt="Third slide" />
       </Carousel.Item>
 
     </Carousel>

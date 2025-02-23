@@ -27,6 +27,7 @@
     opacity : 1.2 ;
     animation : 1s shapeofImage 1s  linear infinite ;
 }
+
 .imagee{
     scale : 1 ;
     /* transition-duration: 0.3s; */
@@ -48,3 +49,4 @@
     text-align: center ;
     justify-content:center;
 }
+
