@@ -37,8 +37,8 @@ function Footer() {
 
 <div>
 <div className='col footbackkk ' >
-                <img src={arm} className='mt-3 mb-3' style={{width: "10%" , marginLeft:"1rem" }} ></img>
-                <p className='mt-4 riv ' > <b  style={{color:"white" , fontSize:"4rem" }}>Riviera Klock</b> <br></br> <p  style={{color:"white" , fontSize:"2.5rem" }}>Premium Watch Store</p> </p>
+                {/* <img src={arm} className='mt-3 mb-3' style={{width: "10%" , marginLeft:"1rem" }} ></img> */}
+                <p className='mt-4 riv ' > <b  style={{color:"white" , fontSize:"2rem" }}>Riviera Klock</b> <br></br> <p  style={{color:"white" , fontSize:"1rem" , padding:"0.5rem"}}>Premium Watch Store</p> </p>
 
                 {/* <p><i class="fa-brands ml-3 fa-facebook "></i> <i class="fa-brands fa-instagram  ml-3"></i><i   style={{color:"white" , backgroundColor:"white" }} class="fa-brands fa-linkedin ml-3"></i></p> */}
                 <hr></hr>
@@ -49,5 +49,5 @@ function Footer() {
 
     </>);
 }
-
+ 
 export default Footer;

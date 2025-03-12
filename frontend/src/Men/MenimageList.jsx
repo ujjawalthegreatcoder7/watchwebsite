@@ -25,7 +25,7 @@ import Paymentimage2 from  "../assets/paymentimage2.png"
 import TemporaryDrawer from './OpenDrawer';
 import FormAddress from "../Formadress/addressform"
 import { useNavigate } from 'react-router-dom';
-
+import Review from '../Review/review';
 
 function srcset(image, width, height, rows = 1, cols = 1) {
     return {
@@ -76,8 +76,76 @@ const navigate = useNavigate();
         });
     }, [id]);
 
+   
+    const [reviewformData, setreviewFormData] = useState({
+
+      email: "",
+
+    });
+
+    const reviewhandleChange = (e) => {
+      const { name, value } = e.target;
+      setreviewFormData((prevData) => ({
+        ...prevData,
+        [name]: value,
+      }));
+    };
+
+    const handleSubmitReview = async (e) => {
+      e.preventDefault();
+      
+      try {
+        const response = await fetch(`http://localhost:7070/review/${id}/save`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(reviewformData), // FIXED
+        });
+    
+        if (!response.ok) {
+          throw new Error(`Backend error: ${response.status} ${response.statusText}`);
+        }
+    
+        const result = await response.json();
+        console.log("Response from backend:", result);
+        window.location.reload();
+        // Navigate to the home page after successful review submission
+        // navigate(`/radha/men`);
+
+      } catch (error) {
+        console.error("Error submitting review:", error);
+      }
+    };
+        
+
+
+      const [reviews, setReviews] = useState([]); // ✅ Initialize reviews
+  
+      useEffect(() => {
+          const fetchReviews = async () => {
+              try {
+                  const response = await fetch(`http://localhost:7070/review/${id}`);
+                  if (!response.ok) {
+                      throw new Error("Failed to fetch reviews");
+                  }
+                  const data = await response.json();
+                  setReviews(data); // ✅ Update state with fetched reviews
+              } catch (error) {
+                  console.error("Error fetching reviews:", error);
+              }
+          };
+  
+          if (id) fetchReviews(); // ✅ Only fetch if listingId is available
+      }, [id]);
+
+
+
+
 return( <>
+
 <div className='divone' >
+
 <div className='menshowdiv' >
 
     <div id="carouselExample" class="carousel slide  moveimage">
@@ -167,8 +235,8 @@ return( <>
 
 <div  >
 
-<img style={{width : "45%"}} src={Paymentimage1}   onClick={handleClick}    ></img>
-<img src={Paymentimage2}  style={{width : "50%" , marginLeft:"1rem"}} ></img>
+<img style={{width : "40%"}} src={Paymentimage1}   onClick={handleClick}    ></img>
+<img src={Paymentimage2}  style={{width : "45%" , marginLeft:"1rem"}} ></img>
 
 </div>
 <TemporaryDrawer/>
@@ -176,7 +244,7 @@ return( <>
 
 </div>
 
-<Accordion className='mt-5' >
+<Accordion className='mt-5' style={{width : "100%"}} >
   <AccordionSummary id="panel-header" aria-controls="panel-content" >
     More Info
   </AccordionSummary>
@@ -196,7 +264,65 @@ return( <>
     <hr></hr>
 
     <h3 className='continuefor' > Comments </h3>
-    
+
+
+
+
+    <form
+      className="row g-3"
+      onSubmit={handleSubmitReview}
+      style={{ padding: "4rem" }}
+    >
+      <div className="col-md-12  col-lg-12"   style={{marginTop:"-2rem"}}  >
+        <label htmlFor="inputEmail4"  className="form-label">
+          Enter Your Experience
+        </label>
+        <div style={{display:"flex",justifyContent:"center"}}>
+        <input
+          // type="email"
+          name="email" // changed from "input2" to "email"
+          className="form-control colorborder"
+          style={{width : "70%" , height : "4.5rem"}}
+          id="inputEmail4"
+          required
+          value={reviewformData.email}
+          onChange={reviewhandleChange}
+          placeholder="Add your Comment"
+        />
+        </div>
+      </div>
+
+
+
+      <div className="col-12">
+        <button type="submit" required className="btn btn-dark colorborder">
+          Add Comment
+        </button>
+      </div>
+    </form>
+
+
+
+    <div style={{marginTop:"-3rem"}} >
+      <hr></hr>
+      <h2>Reviews</h2>
+            {reviews.length > 0 ? (
+                reviews.map((review, index) => (
+                    <div key={index}>
+                        <p>{review.createdAt}</p>
+                        <p>{review.email}</p>
+                    </div>
+                ))
+            ) : (
+                <p>No reviews yet</p>
+            )}
+        </div>
+
+
+    <div>
+      
+    </div>
+
     <hr></hr>
     </div>
     <h3 className='continuefor' > Continue For </h3>

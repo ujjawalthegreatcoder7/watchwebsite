@@ -1,7 +1,7 @@
 import "./addressform.css";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-
+ 
 function Logout() {
   const navigate = useNavigate();
 
@@ -13,7 +13,6 @@ function Logout() {
       // Adjust the URL to match your backend endpoint
       const response = await fetch("http://localhost:7070/logout", {
         method: "GET",
-        
       });
 
       if (response.ok) {

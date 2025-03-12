@@ -11,7 +11,7 @@ function SignupDetails() {
     email: "",
     password: "",
   });
-
+ 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -36,7 +36,8 @@ function SignupDetails() {
         const result = await response.json();
         console.log("Response from backend:", result);
         // Navigate to the delivery details page after successful signup
-        navigate("/Riviera Klock/filldeliverydetails");
+        console.log("radhaji")
+        navigate("/radha/home");
       } else {
         console.error("Backend responded with an error:", response.statusText);
       }

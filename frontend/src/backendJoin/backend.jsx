@@ -9,6 +9,7 @@ import home4 from "../assets/home4.png"
 import home5 from "../assets/home5.png"
 
 import LinearColor from '../backendJoin/backendLoading';
+import MasonryImageList from './imagecollage';
 
 const ManContent = () => {
   const [listings, setListings] = useState([]);
@@ -313,7 +314,9 @@ const ManContent = () => {
 </div>
 
 </div>
-
+<div style={{display:"flex" , justifyContent:"center"}} className='mt-4 mb-5' >
+{/* <MasonryImageList/> */}
+</div>
     </>
   );
 };

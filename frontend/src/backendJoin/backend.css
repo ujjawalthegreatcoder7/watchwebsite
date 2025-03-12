@@ -1,6 +1,7 @@
 .boxgap{
     margin-left: 2rem;
 }
+
 @keyframes appear {
     from {
         opacity : 0.5 ;

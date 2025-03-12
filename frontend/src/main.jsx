@@ -20,6 +20,7 @@ import FormAddress from './Formadress/addressform.jsx';
 import LoginDetails from './Formadress/logindetails.jsx';
 import SignupDetails from './Formadress/signupdetails.jsx';
 import Logout from './Formadress/logout.jsx';
+import Payment from './payment/payment.jsx';
 // import {Listing} from "./models/listing.jsx"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -47,6 +48,7 @@ root.render(
         <Route path="/Riviera Klock/fillsignupdetails" element={<SignupDetails/>} /> 
         <Route path="/Riviera Klock/fillsignupdetails" element={<SignupDetails/>} /> 
         <Route path="/Riviera Klock/logout" element={<Logout/>} /> 
+        <Route path="/Riviera Klock/payment" element={<Payment/>} /> 
 
         
         {/* Add other routes as needed */}

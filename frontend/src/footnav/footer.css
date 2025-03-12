@@ -4,11 +4,21 @@
 }
 .footertext{
     display : flex ;
-    justify-content: center ;
+    justify-content : center ;
+    background-color: rgb(0, 0, 0);
 }
 .footergap{
-    gap: 9rem;
+    /* gap: 9rem; */
+    width: 100%;
+    display : flex ;
+    justify-content :space-between ;
+    background-color: #36454F;
+   padding : 1.5rem ;
+   text-align: center ;
 }
+
+
+
 .riv{
     margin-left: 1rem;
     /* font-family: 'Montserrat', sans-serif; */
